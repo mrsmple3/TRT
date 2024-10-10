@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./assets/imgs/logo.svg" type="image/x-icon" />
+
+		<link rel="stylesheet" href="./style/swiper.min.css" />
+		<link rel="stylesheet" href="./style/main.css" />
+
+		<!-- script  -->
+		<script src="./script/lib/jquery-3.7.1.min.js" defer></script>
+		<script src="./script/lib/swiper.min.js" defer></script>
+
+		<!-- gsap -->
+		<script src="./script/lib/gsap/gsap.min.js" defer></script>
+		<script src="./script/lib/gsap/Observer.min.js" defer></script>
+		<script src="./script/lib/gsap/ScrollSmoother.min.js" defer></script>
+		<script src="./script/lib/gsap/ScrollToPlugin.js" defer></script>
+		<script src="./script/lib/gsap/ScrollTrigger.min.js" defer></script>
+
+		<!-- my script  -->
+		<script src="./script/slider.js" defer></script>
+		<script src="./script/app.js" defer></script>
+		<title>TRT</title>
+	</head>
+	<body>
+		<!-- header start -->
+		<header>
+			<a href="./index.html" class="logo__container">
+				<img src="./assets/imgs/logo.svg" alt="" />
+			</a>
+			<nav class="navbar">
+				<a href="" class="nav__item">Каталог</a>
+				<a href="" class="nav__item">О компании</a>
+				<a href="" class="nav__item">Партнеры</a>
+				<a href="" class="nav__item">Новости</a>
+				<a href="" class="nav__item">Контакты</a>
+				<div class="dropdown-lang">
+					<div class="current-lang">RU ▾</div>
+					<ul class="dropdown-list">
+						<li class="item-dropdown">RU</li>
+						<li class="item-dropdown">UZ</li>
+						<li class="item-dropdown">EN</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="phone">
+				<a href="tel:+99871 203-20-30" class="phone__link">+99871 203-20-30</a>
+				<span class="phone__sub">Заказать обратный звонок</span>
+			</div>
+			<div id="search_icon">
+				<img src="./assets/icons/search.svg" alt="" class="search__icon" />
+			</div>
+			<a href="" class="request__btn">Оставить заявку</a>
+			<div class="menu-btn">
+				<div class="menu-btn__replacer"></div>
+				<img src="./assets/icons/menu-burger.svg" alt="" class="menu-btn__burger" />
+				<img src="./assets/icons/circle-xmark.svg" alt="" class="menu-btn__close" />
+			</div>
+		</header>
+		<div class="mobile-menu">
+			<span class="mobile-menu__title">МЕНЮ</span>
+			<div class="mobile-menu__navbar">
+				<a href="" class="navbar__item">Главная</a>
+				<a href="" class="navbar__item">Каталог</a>
+				<a href="" class="navbar__item">О компании</a>
+				<a href="" class="navbar__item">Лаборатория</a>
+				<a href="" class="navbar__item">Партнеры</a>
+				<a href="" class="navbar__item">Новости</a>
+				<a href="" class="navbar__item">Контакты</a>
+				<div class="dropdown-lang">
+					<div class="current-lang">RU ▾</div>
+					<ul class="dropdown-list">
+						<li class="item-dropdown">RU</li>
+						<li class="item-dropdown">UZ</li>
+						<li class="item-dropdown">EN</li>
+					</ul>
+				</div>
+			</div>
+			<div class="phone">
+				<span class="phone__sub">Номер телефона</span>
+				<a href="tel:+99871 203-20-30" class="phone__link">+99871 203-20-30</a>
+			</div>
+			<p class="address">Адрес Узбекистан, Ташкентская область, 111811, Зангиатинский р-н, Эркин КФЙ, ул. Зафаробод, 37а</p>
+			<a href="mailto:info@trt-parts.com" class="mail">info@trt-parts.com</a>
+			<div class="socmedia">
+				<a href="" class="soc__item"><img src="./assets/icons/socmedia-1.svg" alt="" /></a>
+				<a href="" class="soc__item"><img src="./assets/icons/socmedia-2.svg" alt="" /></a>
+				<a href="" class="soc__item"><img src="./assets/icons/socmedia-3.svg" alt="" /></a>
+			</div>
+		</div>
+		<!-- header end -->
+
+		<main class="main-block">
+			<div class="swiper main-slider">
+				<div class="btns">
+					<img src="./assets/icons/circle-arrow-left.svg" alt="" class="btns__prev" />
+					<img src="./assets/icons/circle-arrow-right.svg" alt="" class="btns__next" />
+				</div>
+				<div class="swiper-fraction"></div>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="main-slider__item" data-swiper-parallax="50%">
+							<img src="./assets/imgs/main-slider-1.jpg" alt="" class="slide__img" />
+							<div class="offer">
+								<div class="offer__content">
+									<span class="span-text">АВТОЗАПЧАСТИ</span>
+									<h1 class="main-title">Глобальные стандарты качества</h1>
+								</div>
+								<div class="offer__structure">
+									<a href="" class="btn-arrow main-slider__btn">
+										<span>Связаться с нами</span>
+										<div class="btn__label__container">
+											<img src="./assets/icons/arrow-right.svg" alt="" class="btn__label" />
+										</div>
+									</a>
+									<img src="./assets/icons/settings.svg" alt="" class="settings" />
+									<div class="replacer__fraction"></div>
+								</div>
+							</div>
+							<div class="offer__bottom">
+								<div class="replacer__btns"></div>
+								<p class="sub">Полный цикл производства современных высококачественных автозапчастей для легковых и грузовых автомобилей</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="main-slider__item" data-swiper-parallax="50%">
+							<img src="./assets/imgs/main-slider-1.jpg" alt="" class="slide__img" />
+							<div class="offer">
+								<div class="offer__content">
+									<span class="span-text">АВТОЗАПЧАСТИ</span>
+									<h1 class="main-title">Глобальные стандарты качества</h1>
+								</div>
+								<div class="offer__structure">
+									<a href="" class="btn-arrow main-slider__btn">
+										<span>Связаться с нами</span>
+										<div class="btn__label__container">
+											<img src="./assets/icons/arrow-right.svg" alt="" class="btn__label" />
+										</div>
+									</a>
+									<img src="./assets/icons/settings.svg" alt="" class="settings" />
+									<div class="replacer__fraction"></div>
+								</div>
+							</div>
+							<div class="offer__bottom">
+								<div class="replacer__btns"></div>
+								<p class="sub">Полный цикл производства современных высококачественных автозапчастей для легковых и грузовых автомобилей</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="numbers">
+				<img src="./assets/imgs/main-line-bg.svg" alt="" class="numbers__bg" />
+				<div class="numbers__item">
+					<p class="num">1600+</p>
+					<p class="numbers__sub">Деталей в день</p>
+				</div>
+				<div class="numbers__item">
+					<p class="num">65%</p>
+					<p class="numbers__sub">Доля экспорта</p>
+				</div>
+			</div>
+		</main>
+
+		<div class="line"></div>
+
+		<div class="filter">
+			<img src="./assets/imgs/filter-bg.svg" alt="" class="filter__bg" />
+			<div class="fiter__cotainer">
+				<div class="flex-center">
+					<div class="flex-col-start">
+						<span class="span-text">ФИЛЬТР</span>
+						<h2 class="block-title"><span>Поиск продукции</span></h2>
+					</div>
+					<img src="./assets/icons/circle-setting.svg" alt="" class="circle-settings" />
+				</div>
+				<div class="filters__content">
+					<div class="filters__item">
+						<p class="item__title">Наименование детали</p>
+						<form>
+							<input type="search" placeholder="Например, опора КПП" value="" id="search" />
+							<img src="./assets/icons/dropdown-search.svg" alt="" class="dropdown__search__icon" />
+						</form>
+					</div>
+					<div class="filters__item">
+						<p class="item__title">TRT-код</p>
+						<div class="filter__dropdown">
+							<input type="text" value="NR1001" class="" disabled />
+							<img src="./assets/icons/triangel.svg" alt="" class="dropdown__triangel" />
+							<div class="filter__dropdown__container">
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+							</div>
+						</div>
+					</div>
+					<div class="filters__item">
+						<p class="item__title">OEM номер</p>
+						<div class="filter__dropdown">
+							<input type="text" value="2875013" class="" disabled />
+							<div class="filter__dropdown__container">
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+							</div>
+						</div>
+					</div>
+					<div class="filters__item">
+						<p class="item__title">Марка</p>
+						<div class="filter__dropdown">
+							<input type="text" value="DAEWOO" class="" disabled />
+							<div class="filter__dropdown__container">
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+							</div>
+						</div>
+					</div>
+					<div class="filters__item">
+						<p class="item__title">Модель</p>
+						<div class="filter__dropdown">
+							<input type="text" value="Nexia" class="" disabled />
+							<div class="filter__dropdown__container">
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+							</div>
+						</div>
+					</div>
+					<a href="" class="filter__btn">Найти деталь</a>
+				</div>
+			</div>
+		</div>
+
+		<img src="./assets/imgs/label-img.jpg" alt="" class="img__label" />
+
+		<div class="quality">
+			<div class="flex-end">
+				<div class="flex-col-start">
+					<span class="span-text"> ПРИЦНИПЫ </span>
+					<h2 class="block-title">
+						Высочайшее качество
+						<span>на всех этапах производства</span>
+					</h2>
+				</div>
+				<a href="" class="btn-arrow main-slider__btn">
+					<span>О компании</span>
+					<div class="btn__label__container">
+						<img src="./assets/icons/arrow-right.svg" alt="" class="btn__label" />
+					</div>
+				</a>
+			</div>
+			<div class="quality__cards">
+				<div class="quality__card">
+					<div class="card__top">
+						<img src="./assets/icons/quality-card-1.svg" alt="" class="card__img" />
+						<span class="card__number">01</span>
+					</div>
+					<h4 class="card__title">Надежность и качество</h4>
+					<p class="card__sub">Наше оборудование и процессы производства направлены на обеспечение долговечности и надежности наших продуктов</p>
+				</div>
+				<div class="quality__card">
+					<div class="card__top">
+						<img src="./assets/icons/quality-card-2.svg" alt="" class="card__img" />
+						<span class="card__number">02</span>
+					</div>
+					<h4 class="card__title">Передовые технологии</h4>
+					<p class="card__sub">Cовременные методы тестирования, автоматизированные системы контроля качества и инновационные материалы в производстве</p>
+				</div>
+				<div class="quality__card">
+					<div class="card__top">
+						<img src="./assets/icons/quality-card-3.svg" alt="" class="card__img" />
+						<span class="card__number">03</span>
+					</div>
+					<h4 class="card__title">Клиентоориентированность и гибкость</h4>
+					<p class="card__sub">
+						Мы ценим наших клиентов и стремимся удовлетворить их индивидуальные потребности. Благодаря высокому уровню гибкости в производстве мы способны
+						адаптироваться к изменениям на рынке и быстро реагировать на запросы клиентов. Мы поддерживаем долгосрочные партнерские отношения.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="catalog">
+			<img src="./assets/imgs/catalog-img.jpg" alt="" class="catalog__img" />
+			<span class="span-text">КАТАЛОГ</span>
+			<h2 class="block-title">Разделы предоставляемой <span>продукции</span></h2>
+			<div class="catalog__line"></div>
+			<div class="catalog__cards">
+				<a href="" class="catalog__card">
+					<div class="btn-arrow-right">
+						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+					</div>
+					<img src="./assets/imgs/catalog-1.png" alt="" class="catalog__card__img" />
+					<h3 class="block-title catalog__card__title">Рычаги подвески</h3>
+					<p class="sub">Раздел</p>
+				</a>
+				<a href="" class="catalog__card">
+					<div class="btn-arrow-right">
+						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+					</div>
+					<img src="./assets/imgs/catalog-2.png" alt="" class="catalog__card__img" />
+					<h3 class="block-title catalog__card__title">Шаровые опоры</h3>
+					<p class="sub">Раздел</p>
+				</a>
+				<a href="" class="catalog__card">
+					<div class="btn-arrow-right">
+						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+					</div>
+					<img src="./assets/imgs/catalog-3.png" alt="" class="catalog__card__img" />
+					<h3 class="block-title catalog__card__title">Наконечники рулевой тяги</h3>
+					<p class="sub">Раздел</p>
+				</a>
+				<a href="" class="catalog__card">
+					<div class="btn-arrow-right">
+						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+					</div>
+					<img src="./assets/imgs/catalog-4.png" alt="" class="catalog__card__img" />
+					<h3 class="block-title catalog__card__title">Резиновые комплектующие</h3>
+					<p class="sub">Раздел</p>
+				</a>
+				<a href="" class="catalog__card">
+					<div class="btn-arrow-right">
+						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+					</div>
+					<img src="./assets/imgs/catalog-5.png" alt="" class="catalog__card__img" />
+					<h3 class="block-title catalog__card__title">Стойки стабилизатора</h3>
+					<p class="sub">Раздел</p>
+				</a>
+				<a href="" class="catalog__card">
+					<div class="btn-arrow-right">
+						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+					</div>
+					<img src="./assets/imgs/catalog-6.png" alt="" class="catalog__card__img" />
+					<h3 class="block-title catalog__card__title">Шарниры и рулевые тяги</h3>
+					<p class="sub">Раздел</p>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
