@@ -69,7 +69,6 @@
 			});
 		}
 
-
 		//!Mobile Dropdown
 		$(".dropdown-lang").click(function (event) {
 			event.stopPropagation();
@@ -85,13 +84,11 @@
 			return x.toString();
 		}
 
-
-
 		//!numerical
-		if ($(".benefits__nums .num").length > 0) {
-			$(".benefits__nums .num").each(function () {
-				var $counter = $(this);
-				var value = { val: parseInt($counter.text()) };
+		if ($(".numbers .num").length > 0) {
+			$(".numbers .num").each(function () {
+				const $counter = $(this);
+				const value = { val: parseInt($counter.text()) };
 
 				// Function to start the animation
 				function startAnimation() {
@@ -121,21 +118,27 @@
 				observer.observe(this);
 			});
 		}
-		//!Catalog Products
-		$(".catalog-products-page__cards__item").each(function () {
-			const $item = $(this);
-			const $downloadLink = $item.find(".item__download-link");
-			const $image = $item.find(".item__img");
-			const url = $image.data("url");
 
-			// Если у изображения есть data-url, делаем кликабельным элемент .item__download-link
-			if (url) {
-				$downloadLink.on("click", function (event) {
-					event.preventDefault();
-					console.log(url);
-					window.location.href = url; // Перенаправляем на ссылку из data-url
-				});
-			}
+		//!Filter
+		$(".filter__dropdown__item").on("click", function () {
+			// Получаем значение выбранного элемента
+			var selectedValue = $(this).val();
+			// Находим родительский элемент .filter__dropdown
+			var $dropdown = $(this).closest(".filter__dropdown");
+			// Обновляем значение поля .dropdown__current в этом выпадающем списке
+			$dropdown.find(".dropdown__current").val(selectedValue);
+			$dropdown.removeClass("active");
 		});
+
+		if (!$minWidthMobile) {
+			$(".dropdown__current").on("click", function () {
+				const dropdown = $(this).closest(".filter__dropdown");
+				if (dropdown.hasClass("active")) {
+					dropdown.removeClass("active");
+				} else {
+					dropdown.addClass("active");
+				}
+			});
+		}
 	});
 })(jQuery);

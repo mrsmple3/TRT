@@ -155,11 +155,11 @@
 			<div class="numbers">
 				<img src="./assets/imgs/main-line-bg.svg" alt="" class="numbers__bg" />
 				<div class="numbers__item">
-					<p class="num">1600+</p>
+					<p class="num__container"><span class="num">1600</span>+</p>
 					<p class="numbers__sub">Деталей в день</p>
 				</div>
 				<div class="numbers__item">
-					<p class="num">65%</p>
+					<p class="num__container"><span class="num">65</span>%</p>
 					<p class="numbers__sub">Доля экспорта</p>
 				</div>
 			</div>
@@ -188,49 +188,52 @@
 					<div class="filters__item">
 						<p class="item__title">TRT-код</p>
 						<div class="filter__dropdown">
-							<input type="text" value="NR1001" class="" disabled />
+							<input type="text" class="dropdown__current" value="NR1001" class="" readonly />
 							<img src="./assets/icons/triangel.svg" alt="" class="dropdown__triangel" />
 							<div class="filter__dropdown__container">
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas2" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas3" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas4" readonly />
 							</div>
 						</div>
 					</div>
 					<div class="filters__item">
 						<p class="item__title">OEM номер</p>
 						<div class="filter__dropdown">
-							<input type="text" value="2875013" class="" disabled />
+							<input type="text" class="dropdown__current" value="2875013" class="" readonly />
+							<img src="./assets/icons/triangel.svg" alt="" class="dropdown__triangel" />
 							<div class="filter__dropdown__container">
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas1" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas2" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas3" readonly />
 							</div>
 						</div>
 					</div>
 					<div class="filters__item">
 						<p class="item__title">Марка</p>
 						<div class="filter__dropdown">
-							<input type="text" value="DAEWOO" class="" disabled />
+							<input type="text" class="dropdown__current" value="DAEWOO" class="" readonly />
+							<img src="./assets/icons/triangel.svg" alt="" class="dropdown__triangel" />
 							<div class="filter__dropdown__container">
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas1" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas2" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas3" readonly />
 							</div>
 						</div>
 					</div>
 					<div class="filters__item">
 						<p class="item__title">Модель</p>
 						<div class="filter__dropdown">
-							<input type="text" value="Nexia" class="" disabled />
+							<input type="text" class="dropdown__current" value="Nexia" class="" readonly />
+							<img src="./assets/icons/triangel.svg" alt="" class="dropdown__triangel" />
 							<div class="filter__dropdown__container">
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
-								<input type="text" class="filter__dropdown__item" value="sdfas" disabled />
+								<input type="text" class="filter__dropdown__item" value="sdfas" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas1" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas2" readonly />
+								<input type="text" class="filter__dropdown__item" value="sdfas3" readonly />
 							</div>
 						</div>
 					</div>
@@ -294,55 +297,144 @@
 			<h2 class="block-title">Разделы предоставляемой <span>продукции</span></h2>
 			<div class="catalog__line"></div>
 			<div class="catalog__cards">
-				<a href="" class="catalog__card">
-					<div class="btn-arrow-right">
-						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+				<div class="catalog__cards__big">
+					<a href="" class="catalog__card">
+						<div class="btn-arrow-right">
+							<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+						</div>
+						<img src="./assets/imgs/catalog-1.png" alt="" class="catalog__card__img" />
+						<h3 class="block-title catalog__card__title">Рычаги подвески</h3>
+						<p class="sub">Раздел</p>
+					</a>
+					<a href="" class="catalog__card">
+						<div class="btn-arrow-right">
+							<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+						</div>
+						<img src="./assets/imgs/catalog-4.png" alt="" class="catalog__card__img" />
+						<h3 class="block-title catalog__card__title">Резиновые комплектующие</h3>
+						<p class="sub">Раздел</p>
+					</a>
+				</div>
+				<div class="catalog__cards__small">
+					<a href="" class="catalog__card">
+						<div class="btn-arrow-right">
+							<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+						</div>
+						<img src="./assets/imgs/catalog-2.png" alt="" class="catalog__card__img" />
+						<h3 class="block-title catalog__card__title">Шаровые опоры</h3>
+						<p class="sub">Раздел</p>
+					</a>
+					<a href="" class="catalog__card">
+						<div class="btn-arrow-right">
+							<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+						</div>
+						<img src="./assets/imgs/catalog-3.png" alt="" class="catalog__card__img" />
+						<h3 class="block-title catalog__card__title">Наконечники рулевой тяги</h3>
+						<p class="sub">Раздел</p>
+					</a>
+					<a href="" class="catalog__card">
+						<div class="btn-arrow-right">
+							<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+						</div>
+						<img src="./assets/imgs/catalog-5.png" alt="" class="catalog__card__img" />
+						<h3 class="block-title catalog__card__title">Стойки стабилизатора</h3>
+						<p class="sub">Раздел</p>
+					</a>
+					<a href="" class="catalog__card">
+						<div class="btn-arrow-right">
+							<img src="./assets/icons/arrow-right-btn.svg" alt="" />
+						</div>
+						<img src="./assets/imgs/catalog-6.png" alt="" class="catalog__card__img" />
+						<h3 class="block-title catalog__card__title">Шарниры и рулевые тяги</h3>
+						<p class="sub">Раздел</p>
+					</a>
+				</div>
+			</div>
+			<div class="catalog__sub">
+				<p class="sub">О продукции</p>
+				<div class="catalog__sub__content">
+					<p>
+						Мы гордимся предлагать широкий ассортимент высококачественных автозапчастей, разработанных с использованием передовых технологий и инновационных
+						материалов.
+					</p>
+					<p>
+						Наша продукция включает в себя запасные части для легковых и грузовых автомобилей, спроектированные для обеспечения оптимальной производительности и
+						долговечности.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="question">
+			<img src="./assets/imgs/question-img.png" alt="" class="question__img" />
+			<div class="question__contanier">
+				<div class="flex-center">
+					<h3 class="question__title">Возникли вопросы <span>или предложения?</span></h3>
+					<img src="./assets/icons/question.svg" alt="" class="question__icon" />
+				</div>
+				<p class="sub">Оставьте заявку, заполнив специальную форму, либо свяжитесь с нами по нашим контактным данным.</p>
+				<a href="" class="btn-arrow">
+					<span>Связаться с нами</span>
+					<div class="btn__label__container">
+						<img src="./assets/icons/arrow-right.svg" alt="" class="btn__label" />
 					</div>
-					<img src="./assets/imgs/catalog-1.png" alt="" class="catalog__card__img" />
-					<h3 class="block-title catalog__card__title">Рычаги подвески</h3>
-					<p class="sub">Раздел</p>
-				</a>
-				<a href="" class="catalog__card">
-					<div class="btn-arrow-right">
-						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
-					</div>
-					<img src="./assets/imgs/catalog-2.png" alt="" class="catalog__card__img" />
-					<h3 class="block-title catalog__card__title">Шаровые опоры</h3>
-					<p class="sub">Раздел</p>
-				</a>
-				<a href="" class="catalog__card">
-					<div class="btn-arrow-right">
-						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
-					</div>
-					<img src="./assets/imgs/catalog-3.png" alt="" class="catalog__card__img" />
-					<h3 class="block-title catalog__card__title">Наконечники рулевой тяги</h3>
-					<p class="sub">Раздел</p>
-				</a>
-				<a href="" class="catalog__card">
-					<div class="btn-arrow-right">
-						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
-					</div>
-					<img src="./assets/imgs/catalog-4.png" alt="" class="catalog__card__img" />
-					<h3 class="block-title catalog__card__title">Резиновые комплектующие</h3>
-					<p class="sub">Раздел</p>
-				</a>
-				<a href="" class="catalog__card">
-					<div class="btn-arrow-right">
-						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
-					</div>
-					<img src="./assets/imgs/catalog-5.png" alt="" class="catalog__card__img" />
-					<h3 class="block-title catalog__card__title">Стойки стабилизатора</h3>
-					<p class="sub">Раздел</p>
-				</a>
-				<a href="" class="catalog__card">
-					<div class="btn-arrow-right">
-						<img src="./assets/icons/arrow-right-btn.svg" alt="" />
-					</div>
-					<img src="./assets/imgs/catalog-6.png" alt="" class="catalog__card__img" />
-					<h3 class="block-title catalog__card__title">Шарниры и рулевые тяги</h3>
-					<p class="sub">Раздел</p>
 				</a>
 			</div>
 		</div>
+		<!-- footer -->
+		<footer>
+			<div class="footer__content">
+				<div class="flex-col-start">
+					<h5 class="footer__title">КОМПАНИЯ</h5>
+					<div class="footer__nav">
+						<a href="" class="footer__nav__item">Каталог</a>
+						<a href="" class="footer__nav__item">О компании</a>
+						<a href="" class="footer__nav__item">Партнеры</a>
+						<a href="" class="footer__nav__item">Дистрибьюторы</a>
+						<a href="" class="footer__nav__item">Контакты</a>
+					</div>
+				</div>
+				<div class="flex-col-start">
+					<h5 class="footer__title">ПРОДУКЦИЯ</h5>
+					<div class="footer__nav">
+						<a href="" class="footer__nav__item">Рычаги подвески</a>
+						<a href="" class="footer__nav__item">Шаровые опоры</a>
+						<a href="" class="footer__nav__item">Рулевые наконечники</a>
+						<a href="" class="footer__nav__item">Стойки стабилизатора</a>
+						<a href="" class="footer__nav__item">Ступицы</a>
+					</div>
+				</div>
+				<div class="flex-col-start">
+					<h5 class="footer__title">МАТЕРИАЛЫ</h5>
+					<div class="footer__nav">
+						<a href="" class="footer__nav__item">Новости</a>
+						<a href="" class="footer__nav__item">Лаборатория</a>
+					</div>
+				</div>
+				<div class="flex-col-start">
+					<h5 class="footer__title">КОНТАКТЫ</h5>
+					<div class="footer__nav">
+						<div class="phone">
+							<span class="phone__sub">Номер телефона</span>
+							<a href="tel:+99871 203-20-30" class="phone__link">+99871 203-20-30</a>
+						</div>
+						<p class="address">Адрес Узбекистан, Ташкентская область, 111811, Зангиатинский р-н, Эркин КФЙ, ул. Зафаробод, 37а</p>
+						<a href="mailto:info@trt-parts.com" class="mail">info@trt-parts.com</a>
+						<div class="socmedia">
+							<a href="" class="soc__item"><img src="./assets/icons/socmedia-1.svg" alt="" /></a>
+							<a href="" class="soc__item"><img src="./assets/icons/socmedia-2.svg" alt="" /></a>
+							<a href="" class="soc__item"><img src="./assets/icons/socmedia-3.svg" alt="" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="./index.html" class="logo__container">
+				<img src="./assets/imgs/logo.svg" alt="" />
+			</a>
+			<div class="footer__bottom">
+				<div class="footer__about">TECHNOLOGIES OF REAL TIME — Полный цикл производства современных высококачественных автозапчастей</div>
+				<a href="http://icorp.uz" target="_blank" class="icorp"> <img src="./assets/icons/icorp.svg" alt="" />Разработано iCORP </a>
+				<span class="copy">© 2024 | Все права защищены</span>
+			</div>
+		</footer>
 	</body>
 </html>
