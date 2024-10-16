@@ -554,6 +554,18 @@ header {
   height: 35.18px;
 }
 
+@media screen and (max-width: 1050px) {
+  .not-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .not-desktop {
+    display: none !important;
+  }
+}
+
 .menu-btn {
   position: relative;
   cursor: pointer;
@@ -631,8 +643,6 @@ header {
 }
 .main-block .swiper-fraction {
   all: unset;
-  position: absolute;
-  right: calc(5 * (1vw + 1vh));
   color: rgba(255, 255, 255, 0.5);
   font-size: calc(0.8333333333 * (1vw + 1vh));
   font-weight: 400;
@@ -642,8 +652,10 @@ header {
 }
 @media screen and (max-width: 1050px) {
   .main-block .swiper-fraction {
+    position: absolute;
     font-size: 20px;
-    left: 20px;
+    top: -72px;
+    right: 20px;
   }
 }
 .main-block .swiper-wrapper {
@@ -733,11 +745,31 @@ header {
 @media screen and (max-width: 1050px) {
   .main-block .offer__structure {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    padding-right: calc(5 * (1vw + 1vh));
+    padding-left: calc(5 * (1vw + 1vh));
+    justify-content: space-between;
     gap: 10px;
   }
+}
+@media screen and (max-width: 1050px) and (max-width: 1050px) {
+  .main-block .offer__structure {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+.main-block .offer__structure.original {
+  position: absolute;
+  right: calc(5 * (1vw + 1vh));
+  z-index: 2;
+}
+@media screen and (max-width: 1050px) {
+  .main-block .offer__structure.original {
+    left: 0;
+  }
+}
+.main-block .offer__structure.replacer {
+  opacity: 0;
+  pointer-events: none;
 }
 .main-block .main-slider__btn {
   margin-right: calc(1.2083333333 * (1vw + 1vh));
@@ -776,6 +808,11 @@ header {
 }
 .main-block .sub {
   width: calc(21.4166666667 * (1vw + 1vh));
+}
+@media screen and (max-width: 1025px) {
+  .main-block .sub {
+    width: 100%;
+  }
 }
 .main-block .replacer__btns {
   width: calc(5.2916666667 * (1vw + 1vh));
@@ -962,7 +999,7 @@ header {
   align-items: center;
   justify-content: flex-start;
   padding: calc(0.7083333333 * (1vw + 1vh)) calc(6.25 * (1vw + 1vh));
-  background-color: #d00101;
+  background-color: #ff2c2c;
   border-radius: 2px;
   color: #fff;
   font-size: calc(0.6666666667 * (1vw + 1vh));
@@ -1940,7 +1977,7 @@ footer .copy {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(calc(12.8333333333 * (1vw + 1vh)), 1fr));
   gap: calc(0.8333333333 * (1vw + 1vh));
-  margin-bottom: calc(7.2083333333 * (1vw + 1vh));
+  margin-bottom: calc(7.1666666667 * (1vw + 1vh));
 }
 @media screen and (max-width: 1050px) {
   .products {

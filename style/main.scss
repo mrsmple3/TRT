@@ -492,6 +492,16 @@ header {
 	}
 }
 
+.not-mobile {
+	@media screen and (max-width: 1050px) {
+		display: none !important;
+	}
+}
+.not-desktop {
+	@media screen and (min-width: 1050px) {
+		display: none !important;
+	}
+}
 //burger menu
 .menu-btn {
 	position: relative;
@@ -564,8 +574,6 @@ header {
 	}
 	.swiper-fraction {
 		all: unset;
-		position: absolute;
-		right: size(120px);
 		color: rgba(255, 255, 255, 0.5);
 		font-size: size(20px);
 		font-weight: 400;
@@ -573,8 +581,10 @@ header {
 		word-wrap: break-word;
 		z-index: 2;
 		@media screen and (max-width: 1050px) {
+			position: absolute;
 			font-size: 20px;
-			left: 20px;
+			top: -72px;
+			right: 20px;
 		}
 	}
 	.swiper-wrapper {
@@ -637,9 +647,21 @@ header {
 		@include flex-end();
 		justify-content: flex-start;
 		@media screen and (max-width: 1050px) {
-			width: 100%;
-			@include flex-col-start();
+			@include main-container();
+			justify-content: space-between;
 			gap: 10px;
+		}
+		&.original {
+			position: absolute;
+			right: size(120px);
+			z-index: 2;
+			@media screen and (max-width: 1050px) {
+				left: 0;
+			}
+		}
+		&.replacer {
+			opacity: 0;
+			pointer-events: none;
 		}
 	}
 	.main-slider__btn {
@@ -669,6 +691,9 @@ header {
 	}
 	.sub {
 		width: size(514px);
+		@media screen and (max-width: 1025px) {
+			width: 100%;
+		}
 	}
 	.replacer__btns {
 		width: size(127px);
@@ -801,7 +826,7 @@ header {
 	.filter__btn {
 		width: 100%;
 		height: max-content;
-		@include btn(17px, 150px, $main-color, #fff);
+		@include btn(17px, 150px, #ff2c2c, #fff);
 		justify-content: center;
 		align-self: flex-end;
 	}
@@ -1569,7 +1594,7 @@ footer {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(size(308px), 1fr));
 	gap: size(20px);
-	margin-bottom: size(173px);
+	margin-bottom: size(172px);
 	@media screen and (max-width: 1050px) {
 		grid-template-columns: repeat(auto-fill, minmax(183px, 1fr));
 		gap: 20px;

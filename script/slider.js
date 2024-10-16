@@ -21,9 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function updateFractionPosition(index) {
 		const btnTop = $(".main-block .replacer__btns").eq(index).offset().top;
-		const fractionTop = $(".main-block .replacer__fraction").eq(index).offset().top;
+		const btnHeight = $(".main-block .replacer__btns").eq(index).height();
+
+		const fractionTop = $(".main-block .offer__structure.replacer").eq(index).offset().top;
+
+		if (minWidthMobile) {
+			$(".main-block .offer__structure.original").css("top", `${fractionTop}px`);
+		} else {
+			$(".main-block .offer__structure.original .swiper-fraction").css("top", `-${btnHeight / 2 + 72}px`);
+			$(".main-block .offer__structure.original").css("top", `${btnTop + btnHeight + 72}px`);
+		}
 		$(".main-block .btns").css("top", `${btnTop}px`);
-		$(".main-block .swiper-fraction").css("top", `${fractionTop}px`);
 	}
 
 	const sliderMainImgs = new Swiper(".swiper.main-slider", {
