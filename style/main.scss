@@ -834,7 +834,7 @@ header {
 .filters__content {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(size(407px), 1fr));
+	grid-template-columns: repeat(3, 1fr);
 	row-gap: size(34px);
 	column-gap: size(48px);
 	@media screen and (max-width: 1050px) {
@@ -846,6 +846,9 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	&.span-2 {
+		grid-column: span 2;
+	}
 	.item__title {
 		color: black;
 		font-size: size(16px);
@@ -1313,6 +1316,9 @@ header {
 		}
 	}
 	.catalog__card:nth-child(2n) {
+		.catalog__card__title {
+			width: 80%;
+		}
 		.catalog__card__img {
 			left: auto;
 			right: 0;

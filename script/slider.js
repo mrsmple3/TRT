@@ -53,11 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			init: function () {
 				updateFractionPosition(this.realIndex);
 			},
-			slideChange: function () {
-				setTimeout(() => {
-					updateFractionPosition(this.realIndex);
-				}, 200);
-			},
+			// slideChange: function () {
+			// 	setTimeout(() => {
+			// 		updateFractionPosition(this.realIndex);
+			// 	}, 200);
+			// },
 		},
 	});
 });
