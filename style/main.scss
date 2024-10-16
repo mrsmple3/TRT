@@ -633,6 +633,7 @@ header {
 		margin-bottom: size(46px);
 		@media screen and (max-width: 1025px) {
 			@include flex-col-start();
+			margin-bottom: 68px;
 		}
 	}
 	.offer__content {
