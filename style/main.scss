@@ -212,6 +212,10 @@ li {
 	span {
 		@include btn(20px, 51.5px, white, rgba(0, 0, 0, 0.8));
 		border: 1px #e8e8e8 solid;
+		@media screen and (max-width: 400px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 	}
 	.btn__label__container {
 		height: 100%;
@@ -839,6 +843,7 @@ header {
 	row-gap: size(34px);
 	column-gap: size(48px);
 	@media screen and (max-width: 1050px) {
+		@include flex-col-start();
 		gap: 30px;
 	}
 }
@@ -849,6 +854,9 @@ header {
 	align-items: flex-start;
 	&.span-2 {
 		grid-column: span 2;
+		@media screen and (max-width: 1050px) {
+			grid-column: span 1;
+		}
 	}
 	.item__title {
 		color: black;
@@ -1319,6 +1327,9 @@ header {
 	.catalog__card:nth-child(2n) {
 		.catalog__card__title {
 			width: 80%;
+			@media screen and (max-width: 768px) {
+				width: 100%;
+			}	
 		}
 		.catalog__card__img {
 			left: auto;
