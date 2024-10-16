@@ -140,5 +140,19 @@
 				}
 			});
 		}
+
+		$(".dropdown__current").on("input", function () {
+			var searchValue = $(this).val().toLowerCase();
+			var $dropdownContainer = $(this).closest(".filter__dropdown").find(".filter__dropdown__container");
+
+			$dropdownContainer.find(".filter__dropdown__item").each(function () {
+				var itemValue = $(this).val().toLowerCase();
+				if (itemValue.indexOf(searchValue) > -1) {
+					$(this).show();
+				} else {
+					$(this).hide();
+				}
+			});
+		});
 	});
 })(jQuery);

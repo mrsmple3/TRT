@@ -605,6 +605,11 @@ header {
 		justify-content: flex-end;
 		padding-top: size(414px);
 		padding-bottom: size(43px);
+		@media screen and (max-width: 1050px) {
+			justify-content: flex-start;
+			padding-top: 180px;
+			padding-bottom: 78px;
+		}
 		&::before {
 			@media screen and (max-width: 1050px) {
 				content: " ";
@@ -615,11 +620,6 @@ header {
 				background: rgb(0, 0, 0, 0.5);
 				z-index: -1;
 			}
-		}
-		@media screen and (max-width: 1050px) {
-			justify-content: flex-start;
-			padding-top: 168px;
-			padding-bottom: 78px;
 		}
 	}
 	.slide__img {
@@ -1329,7 +1329,7 @@ header {
 			width: 80%;
 			@media screen and (max-width: 768px) {
 				width: 100%;
-			}	
+			}
 		}
 		.catalog__card__img {
 			left: auto;
@@ -1616,6 +1616,7 @@ footer {
 	@media screen and (max-width: 1050px) {
 		grid-template-columns: repeat(auto-fill, minmax(183px, 1fr));
 		gap: 20px;
+		margin-bottom: 177px;
 	}
 	.product__item {
 		width: 100%;
