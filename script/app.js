@@ -55,6 +55,20 @@
 				},
 			});
 
+			$("#search_icon").on("click", function () {
+				const $searchForm = $(".search__form");
+				const $searchInput = $searchForm.find("input");
+
+				$searchForm.toggleClass("active");
+				if ($searchForm.hasClass("active")) {
+					$searchInput.focus();
+				}
+			});
+
+			$(".search__form__close").on("click", function () {
+				$(".search__form").removeClass("active");
+			});
+
 			$(window).on("scroll", handleScroll);
 
 			Observer.create({
