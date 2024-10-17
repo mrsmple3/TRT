@@ -699,6 +699,7 @@ header {
 }
 .main-block .swiper-fraction {
   all: unset;
+  width: calc(2.5 * (1vw + 1vh));
   color: rgba(255, 255, 255, 0.5);
   font-size: calc(0.8333333333 * (1vw + 1vh));
   font-weight: 400;
@@ -1761,6 +1762,7 @@ header {
   }
 }
 .question .question__title {
+  width: 60%;
   color: black;
   font-size: calc(1.1666666667 * (1vw + 1vh));
   font-weight: 300;
@@ -1768,10 +1770,11 @@ header {
   word-wrap: break-word;
 }
 .question .question__title span {
-  color: #d00101;
+  color: #ff2c2c;
 }
 @media screen and (max-width: 1050px) {
   .question .question__title {
+    width: 100%;
     font-size: 23px;
   }
 }
@@ -1990,6 +1993,9 @@ footer .copy {
 .pages {
   background-color: #f5f5f5;
 }
+.pages.about {
+  background-color: white;
+}
 
 .breakets {
   width: 100%;
@@ -2025,6 +2031,12 @@ footer .copy {
   font-weight: 400;
   line-height: 100%;
   word-wrap: break-word;
+}
+@media screen and (max-width: 1050px) {
+  .breakets__item {
+    gap: 17px;
+    font-size: 16px;
+  }
 }
 .breakets__item::after {
   content: "/";
@@ -2111,6 +2123,15 @@ footer .copy {
   }
 }
 
+.span-text {
+  margin-bottom: calc(0.7083333333 * (1vw + 1vh));
+}
+@media screen and (max-width: 1050px) {
+  .span-text {
+    margin-bottom: 17px;
+  }
+}
+
 .catalog-page {
   width: 100%;
   padding-right: calc(5 * (1vw + 1vh));
@@ -2130,6 +2151,22 @@ footer .copy {
     margin-bottom: 100px;
   }
 }
+.catalog-page .span-text {
+  margin-bottom: calc(0.7083333333 * (1vw + 1vh));
+}
+@media screen and (max-width: 1050px) {
+  .catalog-page .span-text {
+    margin-bottom: 17px;
+  }
+}
+.catalog-page .block-title {
+  margin-bottom: calc(2.25 * (1vw + 1vh));
+}
+@media screen and (max-width: 1050px) {
+  .catalog-page .block-title {
+    margin-bottom: 67px;
+  }
+}
 .catalog-page .catalog__cards {
   margin-bottom: calc(4.875 * (1vw + 1vh));
 }
@@ -2143,4 +2180,112 @@ footer .copy {
 }
 .catalog-page .catalog__sub .catalog__sub__content {
   color: rgba(0, 0, 0, 0.5);
+}
+
+.about-page .about__container {
+  width: 100%;
+  padding-right: calc(5 * (1vw + 1vh));
+  padding-left: calc(5 * (1vw + 1vh));
+}
+@media screen and (max-width: 1050px) {
+  .about-page .about__container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .about-page .about__container {
+    padding: 0;
+  }
+}
+.about-page .block-title {
+  margin-bottom: calc(2.5 * (1vw + 1vh));
+}
+@media screen and (max-width: 1050px) {
+  .about-page .block-title {
+    margin-bottom: 50px;
+  }
+}
+.about-page .content__title {
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: calc(1.8333333333 * (1vw + 1vh));
+}
+@media screen and (max-width: 1050px) {
+  .about-page .content__title {
+    margin-bottom: 42px;
+  }
+}
+.about-page .sub {
+  color: rgba(0, 0, 0, 0.5);
+}
+.about-page .about-img {
+  width: calc(26.4583333333 * (1vw + 1vh));
+  height: calc(16.1666666667 * (1vw + 1vh));
+  border-radius: 5px;
+}
+@media screen and (max-width: 1050px) {
+  .about-page .about-img {
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+    max-height: 261px;
+    border-radius: 0;
+  }
+}
+.about-page .quality__cards {
+  margin-bottom: calc(1.375 * (1vw + 1vh));
+}
+@media screen and (max-width: 1050px) {
+  .about-page .quality__cards {
+    margin-bottom: 56px;
+  }
+}
+
+.about__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: calc(3.2083333333 * (1vw + 1vh));
+  border-radius: 5px;
+}
+@media screen and (max-width: 1050px) {
+  .about__content {
+    margin-bottom: 58px;
+  }
+}
+.about__content .flex-end {
+  width: 100%;
+  margin-bottom: calc(1.4166666667 * (1vw + 1vh));
+}
+@media screen and (max-width: 1050px) {
+  .about__content .flex-end {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 55px;
+  }
+}
+.about__content .flex-col-start {
+  width: calc(22.7916666667 * (1vw + 1vh));
+}
+@media screen and (max-width: 1050px) {
+  .about__content .flex-col-start {
+    width: 100%;
+    padding-right: calc(5 * (1vw + 1vh));
+    padding-left: calc(5 * (1vw + 1vh));
+  }
+}
+@media screen and (max-width: 1050px) and (max-width: 1050px) {
+  .about__content .flex-col-start {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.gallery {
+  display: flex;
+  align-items: stretch;
+  gap: calc(0.8333333333 * (1vw + 1vh));
 }/*# sourceMappingURL=main.css.map */

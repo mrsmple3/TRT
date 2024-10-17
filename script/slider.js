@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		updateSlider(sliderMainImgs, ".swiper.main-slider");
 	});
 
-	function updateFractionPosition(index) {
+	function updateFractionPosition(index = 1) {
 		const btnTop = $(".main-block .replacer__btns").eq(index).offset().top;
 		const btnHeight = $(".main-block .replacer__btns").eq(index).height();
 
