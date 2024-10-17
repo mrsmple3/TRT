@@ -586,8 +586,7 @@ header {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(0deg, white 0%, white 100%),
-		linear-gradient(82deg, rgba(43.56, 4.9, 4.9, 0.7) 0%, rgba(105.94, 78.68, 78.68, 0.49) 29%, rgba(255, 255, 255, 0) 100%);
+	// background: #000;
 	overflow: hidden;
 	.main-slider {
 		position: relative;
@@ -651,6 +650,13 @@ header {
 			padding-bottom: 78px;
 		}
 		&::before {
+			content: " ";
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(82deg, rgba(43.56, 4.9, 4.9, 0.7) 0%, rgba(105.94, 78.68, 78.68, 0.49) 29%, rgba(255, 255, 255, 0) 100%);
+			z-index: -1;
 			@media screen and (max-width: 1050px) {
 				content: " ";
 				position: absolute;
@@ -658,7 +664,6 @@ header {
 				width: 100%;
 				height: 100%;
 				background: rgb(0, 0, 0, 0.5);
-				z-index: -1;
 			}
 		}
 	}
