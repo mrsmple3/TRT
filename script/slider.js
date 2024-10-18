@@ -60,4 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
 			// },
 		},
 	});
+
+	const swiperCertificates = new Swiper(".swiper.certificates__slider", {
+		navigation: {
+			nextEl: ".certificate__btn.next",
+			prevEl: ".certificate__btn.prev",
+		},
+		slidesPerView: minWidthMobile ? 4 : 2,
+		speed: 1300,
+		spaceBetween: size(20),
+		loop: true,
+	});
 });

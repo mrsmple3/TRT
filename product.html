@@ -24,7 +24,7 @@
 		<script src="./script/app.js" defer></script>
 		<title>TRT</title>
 	</head>
-	<body class="pages">
+	<body class="pages product-page">
 		<!-- header start -->
 		<header>
 			<a href="./index.html" class="logo__container">
@@ -97,147 +97,108 @@
 		<div class="breakets">
 			<a href="" class="breakets__item">Главная</a>
 			<a href="" class="breakets__item">Поиск</a>
+			<a href="" class="breakets__item">Рычаги подвески</a>
+			<a href="" class="breakets__item">Рычаг подвески правый TRT NEXIA SOHC</a>
 		</div>
 
-		<div class="filter">
-			<div class="fiter__cotainer">
-				<div class="flex-center">
-					<div class="flex-col-start">
-						<span class="span-text">ФИЛЬТР</span>
-						<h2 class="block-title"><span>Поиск продукции</span></h2>
+		<div class="product">
+			<div class="product__cotainer">
+				<div class="product__left">
+					<div class="swiper product__slider__container">
+						<div class="swiper-wrapper">
+							<a class="swiper-slide product__slider__item active">
+								<img src="./assets/imgs/product-img.png" alt="" class="product__slider__img" />
+							</a>
+							<a class="swiper-slide product__slider__item">
+								<img src="./assets/imgs/product-img.png" alt="" class="product__slider__img" />
+							</a>
+							<a class="swiper-slide product__slider__item">
+								<img src="./assets/imgs/product-img.png" alt="" class="product__slider__img" />
+							</a>
+							<a class="swiper-slide product__slider__item">
+								<img src="./assets/imgs/product-img.png" alt="" class="product__slider__img" />
+							</a>
+						</div>
 					</div>
-					<img src="./assets/icons/circle-setting.svg" alt="" class="circle-settings" />
+					<div class="img-current">
+						<img src="./assets/imgs/product-img.png" alt="" />
+					</div>
 				</div>
-				<div class="filters__content">
-					<!-- <div class="filters__item">
-						<p class="item__title">Наименование детали</p>
-						<form>
-							<input type="search" placeholder="Например, опора КПП" value="" id="search" />
-							<img src="./assets/icons/dropdown-search.svg" alt="" class="dropdown__search__icon" />
-						</form>
-					</div> -->
-					<div class="filters__item">
-						<p class="item__title">TRT-код</p>
-						<div class="filter__dropdown">
-							<input type="text" class="dropdown__current" placeholder="Search..." />
-							<img src="./assets/icons/triangel.svg" alt="" class="dropdown__triangel" />
-							<div class="filter__dropdown__container">
-								<input type="text" class="filter__dropdown__item" value="sdfas" readonly />
-								<input type="text" class="filter__dropdown__item" value="21" readonly />
-								<input type="text" class="filter__dropdown__item" value="fsad2" readonly />
-								<input type="text" class="filter__dropdown__item" value="ppmok1" readonly />
-							</div>
-						</div>
+				<div class="product__right">
+					<h3 class="product__title">Рычаг подвески правый TRT NEXIA SOHC</h3>
+					<div class="product__right__info">
+						<div class="info__item">TRT-код: <span class="red">R9000R</span></div>
+						<div class="info__item">Марка: <span class="red">Daewoo</span></div>
+						<div class="info__item">Модель: <span class="red">Nexia Седан</span></div>
+						<div class="info__item">ОЕМ номер: <span class="red">N3424223</span></div>
+						<div class="info__item">Год: <span class="red">02~09</span></div>
 					</div>
-					<div class="filters__item span-2">
-						<p class="item__title">Марка</p>
-						<div class="filter__dropdown">
-							<input type="text" class="dropdown__current" placeholder="Search..." />
-							<img src="./assets/icons/triangel.svg" alt="" class="dropdown__triangel" />
-							<div class="filter__dropdown__container">
-								<input type="text" class="filter__dropdown__item" value="sdfas" readonly />
-								<input type="text" class="filter__dropdown__item" value="sdfas1" readonly />
-								<input type="text" class="filter__dropdown__item" value="sdfas2" readonly />
-								<input type="text" class="filter__dropdown__item" value="sdfas3" readonly />
-							</div>
-						</div>
-					</div>
-					<div class="filters__item">
-						<p class="item__title">OEM номер</p>
-						<div class="filter__dropdown">
-							<input type="text" class="dropdown__current" placeholder="Search..." />
-							<img src="./assets/icons/triangel.svg" alt="" class="dropdown__triangel" />
-							<div class="filter__dropdown__container">
-								<input type="text" class="filter__dropdown__item" value="sdfas" readonly />
-								<input type="text" class="filter__dropdown__item" value="sdfas1" readonly />
-								<input type="text" class="filter__dropdown__item" value="sdfas2" readonly />
-								<input type="text" class="filter__dropdown__item" value="sdfas3" readonly />
-							</div>
-						</div>
-					</div>
-					<div class="filters__item">
-						<p class="item__title">Модель</p>
-						<div class="filter__dropdown">
-							<input type="text" class="dropdown__current" placeholder="Search..." />
-							<img src="./assets/icons/triangel.svg" alt="" class="dropdown__triangel" />
-							<div class="filter__dropdown__container">
-								<input type="text" class="filter__dropdown__item" value="sdfas" readonly />
-								<input type="text" class="filter__dropdown__item" value="sdfas1" readonly />
-								<input type="text" class="filter__dropdown__item" value="sdfas2" readonly />
-								<input type="text" class="filter__dropdown__item" value="sdfas3" readonly />
-							</div>
-						</div>
-					</div>
-					<a href="" class="filter__btn">Найти деталь</a>
 				</div>
 			</div>
-
-			<h4 class="result__title">Результат поиска:</h4>
-
-			<div class="products">
-				<a href="" class="product__item">
-					<div class="product__preview">
-						<img src="./assets/imgs/product-1.png" alt="" class="product__img" />
+			<div class="product__characteristic">
+				<h3 class="characteristic__title">Характеристики</h3>
+				<div class="characteristic__container">
+					<div class="characteristic__item">
+						<span class="item__title">Марка</span>
+						<p class="item__sub">Daewoo</p>
 					</div>
-					<h5 class="product__title">Опора шаровая TRT SPARK R8004</h5>
-					<p class="product__sub">Шаровые опоры</p>
-				</a>
-				<a href="" class="product__item">
-					<div class="product__preview">
-						<img src="./assets/imgs/product-1.png" alt="" class="product__img" />
+					<div class="characteristic__item">
+						<span class="item__title">Объем двигателя </span>
+						<p class="item__sub">1.6 | 80 kw | 109 hp | 07.2008</p>
 					</div>
-					<h5 class="product__title">Опора шаровая TRT SPARK R8004</h5>
-					<p class="product__sub">Шаровые опоры</p>
-				</a>
-				<a href="" class="product__item">
-					<div class="product__preview">
-						<img src="./assets/imgs/product-1.png" alt="" class="product__img" />
+					<div class="characteristic__item">
+						<span class="item__title">Модель</span>
+						<p class="item__sub">NEXIA седан 07.2008</p>
 					</div>
-					<h5 class="product__title">Опора шаровая TRT SPARK R8004</h5>
-					<p class="product__sub">Шаровые опоры</p>
-				</a>
-				<a href="" class="product__item">
-					<div class="product__preview">
-						<img src="./assets/imgs/product-1.png" alt="" class="product__img" />
+					<div class="characteristic__item">
+						<span class="item__title">Номер по каталогу</span>
+						<p class="item__sub">K90182695</p>
 					</div>
-					<h5 class="product__title">Опора шаровая TRT SPARK R8004</h5>
-					<p class="product__sub">Шаровые опоры</p>
-				</a>
-				<a href="" class="product__item">
-					<div class="product__preview">
-						<img src="./assets/imgs/product-1.png" alt="" class="product__img" />
+					<div class="characteristic__item">
+						<span class="item__title">Страна</span>
+						<p class="item__sub">Узбекистан</p>
 					</div>
-					<h5 class="product__title">Опора шаровая TRT SPARK R8004</h5>
-					<p class="product__sub">Шаровые опоры</p>
-				</a>
-				<a href="" class="product__item">
-					<div class="product__preview">
-						<img src="./assets/imgs/product-1.png" alt="" class="product__img" />
+					<div class="characteristic__item">
+						<span class="item__title">Бренд</span>
+						<p class="item__sub">TRT</p>
 					</div>
-					<h5 class="product__title">Опора шаровая TRT SPARK R8004</h5>
-					<p class="product__sub">Шаровые опоры</p>
-				</a>
-				<a href="" class="product__item">
-					<div class="product__preview">
-						<img src="./assets/imgs/product-1.png" alt="" class="product__img" />
+					<div class="characteristic__item">
+						<span class="item__title">Артикул бренда</span>
+						<p class="item__sub">R9000R</p>
 					</div>
-					<h5 class="product__title">Опора шаровая TRT SPARK R8004</h5>
-					<p class="product__sub">Шаровые опоры</p>
-				</a>
-				<a href="" class="product__item">
-					<div class="product__preview">
-						<img src="./assets/imgs/product-1.png" alt="" class="product__img" />
+					<div class="characteristic__item">
+						<span class="item__title">Базовая единица</span>
+						<p class="item__sub">шт</p>
 					</div>
-					<h5 class="product__title">Опора шаровая TRT SPARK R8004</h5>
-					<p class="product__sub">Шаровые опоры</p>
-				</a>
-				<a href="" class="product__item">
-					<div class="product__preview">
-						<img src="./assets/imgs/product-1.png" alt="" class="product__img" />
+					<div class="characteristic__item">
+						<span class="item__title">Категория на сайте</span>
+						<p class="item__sub">Рычаги подвески</p>
 					</div>
-					<h5 class="product__title">Опора шаровая TRT SPARK R8004</h5>
-					<p class="product__sub">Шаровые опоры</p>
-				</a>
+					<div class="characteristic__item">
+						<span class="item__title">Кросс коды OEM</span>
+						<p class="item__sub">96445372 96185972 K90182695 K90375506 96185970 96218398 96445374</p>
+					</div>
+				</div>
+			</div>
+			<div class="recommendation">
+				<div class="flex-center">
+					<h3 class="recommendation__title">Рекомендации</h3>
+					<div class="btns">
+						<img src="./assets/imgs/certificate-btn-left.svg" alt="" class="recommendation__btn prev" />
+						<img src="./assets/imgs/certificate-btn-right.svg" alt="" class="recommendation__btn next" />
+					</div>
+				</div>
+				<div class="swiper recommendation__slider">
+					<div class="swiper-wrapper">
+						<a href="" class="swiper-slide product__item">
+							<div class="product__preview">
+								<img src="./assets/imgs/product-1.png" alt="" class="product__img" />
+							</div>
+							<h5 class="product__title">Опора шаровая TRT SPARK R8004</h5>
+							<p class="product__sub">Шаровые опоры</p>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
