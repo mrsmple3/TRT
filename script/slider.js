@@ -71,4 +71,26 @@ document.addEventListener("DOMContentLoaded", function () {
 		spaceBetween: size(20),
 		loop: true,
 	});
+
+	const swiperRecommendation = new Swiper(".recommendation__slider", {
+		navigation: {
+			nextEl: ".recommendation__btn.next",
+			prevEl: ".recommendation__btn.prev",
+		},
+		slidesPerView: minWidthMobile ? 4 : 2,
+		speed: 1300,
+		spaceBetween: size(20),
+		loop: true,
+	});
+
+	const swiperNews = new Swiper(".news__card__slider", {
+		navigation: {
+			nextEl: ".news__slider__btn.next",
+			prevEl: ".news__slider__btn.prev",
+		},
+		slidesPerView: minWidthMobile ? 4 : 2,
+		speed: 1300,
+		spaceBetween: size(20),
+		loop: true,
+	});
 });
