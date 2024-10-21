@@ -876,7 +876,7 @@ header {
 	.filter__btn {
 		width: 100%;
 		height: max-content;
-		@include btn(17px, 150px, #ff2c2c, #fff);
+		@include btn(17px, 83px, #ff2c2c, #fff);
 		justify-content: center;
 		align-self: flex-end;
 	}
@@ -887,7 +887,7 @@ header {
 .filters__content {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 2fr 1.5fr 1fr;
 	row-gap: size(34px);
 	column-gap: size(48px);
 	@media screen and (max-width: 1050px) {
@@ -1631,6 +1631,12 @@ footer {
 	justify-content: flex-start;
 	gap: size(17px);
 	flex-wrap: wrap;
+	&.without-img {
+		margin-top: size(152px);
+		@media screen and (max-width: 1050px) {
+			margin-top: 137px;
+		}
+	}
 	@media screen and (max-width: 1050px) {
 		gap: 17px;
 	}
@@ -1774,11 +1780,15 @@ footer {
 //!About Page
 .about-page {
 	width: 100%;
+	margin-top: size(65px);
 	.about__container {
 		@include main-container();
 		@media screen and (max-width: 1050px) {
 			padding: 0;
 		}
+	}
+	.span-text {
+		color: rgba(167.88, 167.88, 167.88, 0.65);
 	}
 	.block-title {
 		margin-bottom: size(60px);
@@ -1947,8 +1957,11 @@ footer {
 	border-radius: 5px;
 	cursor: pointer;
 	z-index: 3;
+	&.prev {
+		top: -5%;
+	}
 	&.next {
-		bottom: 0;
+		bottom: -5%;
 	}
 	img {
 		width: size(10px);
@@ -2256,6 +2269,9 @@ footer {
 		line-height: 150%;
 		word-wrap: break-word;
 		margin-bottom: size(93px);
+		p {
+			margin-bottom: 10px;
+		}
 		@media screen and (max-width: 1050px) {
 			font-size: 14px;
 			margin-bottom: 60px;
@@ -2492,10 +2508,13 @@ footer {
 	@media screen and (max-width: 1050px) {
 		flex-direction: column;
 	}
-	.contact__title {
-		margin-bottom: size(31px);
+	.span-text {
+		color: rgba(167.88, 167.88, 167.88, 0.65);
+	}
+	.block-title {
+		margin-bottom: size(68px);
 		@media screen and (max-width: 1050px) {
-			margin-bottom: 30px;
+			margin-bottom: 47px;
 		}
 	}
 	.sub {
@@ -2511,11 +2530,11 @@ footer {
 		gap: size(13px);
 		color: #637388;
 		font-size: size(24px);
-		font-family: Onest;
+		font-family: Poppins, sans-serif;
 		font-weight: 400;
 		line-height: size(33.6px);
 		word-wrap: break-word;
-		margin-bottom: size(45px);
+		margin-bottom: size(80px);
 		@media screen and (max-width: 1050px) {
 			font-size: 24px;
 			line-height: 33px;
@@ -2535,7 +2554,7 @@ footer {
 	.contact__time {
 		color: rgba(0, 0, 0, 0.6);
 		font-size: size(16px);
-		font-family: Onest;
+		font-family: Poppins, sans-serif;
 		font-weight: 400;
 		line-height: size(22.4px);
 		word-wrap: break-word;
@@ -2575,6 +2594,7 @@ footer {
 			width: 100%;
 			color: rgba(0, 0, 0, 0.5);
 			font-size: size(16px);
+			font-family: Poppins, sans-serif;
 			font-weight: 300;
 			line-height: 140%;
 			word-wrap: break-word;
@@ -2616,10 +2636,6 @@ footer {
 		@include btn(20px, 47px, $main-color, white);
 		border-radius: 5px;
 		margin-bottom: size(41px);
-		&:hover {
-			background-color: white;
-			color: $main-color;
-		}
 		@media screen and (max-width: 1050px) {
 			margin-bottom: 41px;
 		}
@@ -2655,19 +2671,18 @@ footer {
 	.phone__title {
 		color: rgba(0, 0, 0, 0.4);
 		font-size: size(13px);
-		font-family: Onest;
+		font-family: Poppins, sans-serif;
 		font-weight: 400;
-		line-height: size(18.2px);
+		line-height: 100%;
 		word-wrap: break-word;
 		@media screen and (max-width: 1050px) {
 			font-size: 13px;
-			line-height: 18.2px;
 		}
 	}
 	.contact__phone {
 		color: #637388;
 		font-size: size(24px);
-		font-family: Onest;
+		font-family: Poppins, sans-serif;
 		font-weight: 400;
 		line-height: size(33.6px);
 		word-wrap: break-word;
@@ -2695,6 +2710,13 @@ footer {
 	padding-left: 0;
 	@include flex-start();
 	margin-top: size(54px);
+	margin-bottom: size(169px);
+	@media screen and (max-width: 1050px) {
+		@include flex-col-start();
+		gap: 51px;
+		margin-top: 56px;
+		margin-bottom: 462px;
+	}
 }
 .distributer__title {
 	background: white;
@@ -2702,22 +2724,101 @@ footer {
 	border-top-right-radius: 10px;
 	padding: size(22px) size(32px);
 	padding-left: size(120px);
+	@media screen and (max-width: 1050px) {
+		padding: 0;
+		border-radius: 0;
+		background-color: transparent;
+	}
 }
 .distributer__content {
 	@include flex-col-start();
+	@media screen and (max-width: 1050px) {
+		width: 100%;
+	}
 	.span-text {
 		color: rgba(0, 0, 0, 0.5);
 		text-transform: capitalize;
 		margin-bottom: size(17px);
+		@media screen and (max-width: 1050px) {
+			display: none;
+		}
 	}
 }
 .distributer__list {
 	width: size(595px);
 	@include flex-col-start();
 	gap: size(11px);
+	@media screen and (max-width: 1050px) {
+		width: 100%;
+		gap: 11px;
+	}
 }
 .distributer__item {
 	width: 100%;
+	@include flex-col-start();
+	gap: 0;
 	padding: size(26px) size(37px);
 	background-color: white;
+	cursor: pointer;
+	transition: all 0.3s;
+	@media screen and (max-width: 1050px) {
+		padding: 26px 20px;
+	}
+	&.active {
+		gap: size(31px);
+		@media screen and (max-width: 1050px) {
+			gap: 25px;
+		}
+		.distributer__item__content {
+			height: max-content;
+		}
+		.distributer__item__icon {
+			transform: rotate(45deg);
+		}
+	}
+	.flex-center {
+		width: 100%;
+	}
+	.distributer__item__title {
+		color: rgba(0, 0, 0, 0.7);
+		font-size: size(16px);
+		font-family: Poppins, sans-serif;
+		font-weight: 300;
+		line-height: 100%;
+		word-wrap: break-word;
+		@media screen and (max-width: 1050px) {
+			font-size: 16px;
+		}
+	}
+	.distributer__item__icon {
+		width: size(21px);
+		height: size(21px);
+		transition: all 0.3s;
+		@media screen and (max-width: 1050px) {
+			width: 21px;
+			height: 21px;
+		}
+	}
+	.distributer__item__content {
+		width: 100%;
+		height: 0;
+		@include flex-col-start();
+		color: rgba(0, 0, 0, 0.7);
+		font-size: size(14px);
+		font-family: Poppins, sans-serif;
+		font-weight: 300;
+		line-height: 180%;
+		word-wrap: break-word;
+		overflow: hidden;
+		transition: all 0.3s;
+		@media screen and (max-width: 1050px) {
+			font-size: 14px;
+		}
+	}
+	.distributer__item__content__info {
+		margin-bottom: size(20px);
+		@media screen and (max-width: 1050px) {
+			margin-bottom: 20px;
+		}
+	}
 }

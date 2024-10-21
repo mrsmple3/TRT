@@ -187,12 +187,21 @@
 
 		// Устанавливаем первый элемент активным при загрузке
 		var $firstItem = $(".product__slider__item").first();
-		updateCurrentImage($firstItem);	
+		updateCurrentImage($firstItem);
 
 		// Обработка клика по элементам с классом .product__slider__item
 		$(".product__slider__item").on("click", function (e) {
 			e.preventDefault();
 			updateCurrentImage($(this));
+		});
+
+		$(".distributer__item").on("click", function () {
+			if ($(this).hasClass("active")) {
+				$(".distributer__item").removeClass("active");
+			} else {
+				$(".distributer__item").removeClass("active");
+				$(this).addClass("active");
+			}
 		});
 	});
 })(jQuery);
