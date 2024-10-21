@@ -937,6 +937,7 @@ header {
 		word-wrap: break-word;
 		cursor: pointer;
 		outline: none;
+		border: none;
 		@media screen and (max-width: 1050px) {
 			font-size: 14px;
 			padding: 16px 17px;
@@ -983,6 +984,10 @@ header {
 			.dropdown__triangel {
 				transform: translateY(-50%) rotate(-180deg);
 			}
+		}
+		&.inactive {
+			opacity: 0.5;
+			pointer-events: none;
 		}
 		&:hover {
 			@media screen and (min-width: 1050px) {
@@ -2311,5 +2316,100 @@ footer {
 	.swiper-wrapper {
 		width: 100%;
 		@include flex-start();
+	}
+}
+
+.partners {
+	@include main-container();
+	@include flex-col-start();
+	margin-top: size(65px);
+	@media screen and (max-width: 400px) {
+		margin-bottom: 37px;
+	}
+	.span-text {
+		color: rgba(167.88, 167.88, 167.88, 0.65);
+		margin-bottom: size(17px);
+		@media screen and (max-width: 1050px) {
+			margin-bottom: 17px;
+		}
+	}
+	.block-title {
+		margin-bottom: size(61px);
+		@media screen and (max-width: 1050px) {
+			margin-bottom: 37px;
+		}
+	}
+}
+.partners__cards {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(size(306px), 1fr));
+	row-gap: size(22px);
+	column-gap: size(28px);
+	margin-bottom: size(185px);
+	@media screen and (max-width: 1050px) {
+		grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+		gap: 28px;
+		margin-bottom: 146px;
+	}
+	@media screen and (max-width: 400px) {
+		@include flex-col-start();
+	}
+	.partners__card {
+		width: 100%;
+		@include flex-col-start();
+	}
+	.partners__card__top {
+		width: 100%;
+		@include flex-center();
+		background-color: white;
+		padding: size(14px) size(11px);
+		@media screen and (max-width: 1050px) {
+			padding: 14px 11px;
+		}
+		.flex-center {
+			justify-content: flex-start;
+			gap: size(6px);
+			@media screen and (max-width: 1050px) {
+				gap: 5px;
+			}
+		}
+	}
+	.flag {
+		width: size(73px);
+		height: size(48px);
+		@media screen and (max-width: 1050px) {
+			width: 73px;
+			height: 48px;
+		}
+	}
+	.flag__sub {
+		width: size(80.59px);
+		color: rgba(0, 0, 0, 0.6);
+		font-size: size(14px);
+		font-family: Poppins, sans-serif;
+		font-weight: 400;
+		line-height: 110%;
+		word-wrap: break-word;
+		@media screen and (max-width: 1050px) {
+			width: 80.59px;
+			font-size: 14px;
+		}
+	}
+	.partners__logo {
+		width: size(129px);
+		height: size(35px);
+		object-fit: contain;
+		@media screen and (max-width: 1050px) {
+			width: 129px;
+			height: 31px;
+		}
+	}
+	.partners__img {
+		width: 100%;
+		height: size(197px);
+		@media screen and (max-width: 1050px) {
+			height: 197px;
+		}
 	}
 }
