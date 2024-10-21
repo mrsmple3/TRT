@@ -626,6 +626,7 @@ header {
 		@media screen and (max-width: 1050px) {
 			position: absolute;
 			font-size: 20px;
+			width: 60px;
 			top: -72px;
 			right: 20px;
 		}
@@ -1821,6 +1822,7 @@ footer {
 	.quality__cards {
 		margin-bottom: size(33px);
 		@media screen and (max-width: 1050px) {
+			@include main-container();
 			margin-bottom: 56px;
 		}
 	}
@@ -1855,11 +1857,20 @@ footer {
 	@include flex-stretch();
 	gap: size(20px);
 	margin-bottom: size(82px);
+	@media screen and (max-width: 1050px) {
+		@include main-container();
+		height: auto;
+		@include flex-col-start();
+	}
 	.gallery__item {
 		flex: 1;
 		width: size(307px);
 		height: 100%;
 		border-radius: 5px;
+		@media screen and (max-width: 1050px) {
+			width: 100%;
+			max-height: 182px;
+		}
 		&:first-child {
 			flex: 2;
 		}
@@ -1871,6 +1882,9 @@ footer {
 	padding-top: size(64px);
 	padding-bottom: size(136px);
 	background-color: #f5f5f5;
+	@media screen and (max-width: 1050px) {
+		padding-bottom: 127px;
+	}
 	.flex-center {
 		width: 100%;
 		gap: size(10px);
