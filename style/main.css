@@ -1084,7 +1084,7 @@ header {
 }
 
 .filter__dropdown__item {
-  background-color: rgba(0, 0, 0, 0.2) !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 .filters__content {
