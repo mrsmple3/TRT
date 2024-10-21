@@ -93,4 +93,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		spaceBetween: size(20),
 		loop: true,
 	});
+
+	const swiperProduct = new Swiper(".swiper.product__slider__container", {
+		navigation: {
+			nextEl: ".product__slider__btn.next",
+			prevEl: ".product__slider__btn.prev",
+		},
+		direction: "vertical",
+		slidesPerView: 4,
+		speed: 1300,
+		spaceBetween: minWidthMobile ? size(10) : 10,
+	});
 });

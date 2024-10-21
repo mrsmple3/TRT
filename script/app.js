@@ -168,5 +168,31 @@
 				}
 			});
 		});
+
+		//!Product
+		// Функция для изменения основного изображения и добавления класса active
+		function updateCurrentImage($clickedItem) {
+			// Убираем класс active у всех элементов
+			$(".product__slider__item").removeClass("active");
+
+			// Добавляем класс active к текущему элементу
+			$clickedItem.addClass("active");
+
+			// Получаем src изображения из кликнутого элемента
+			var imgSrc = $clickedItem.find("img").attr("src");
+
+			// Меняем src изображения в блоке .img-current
+			$(".img-current img").attr("src", imgSrc);
+		}
+
+		// Устанавливаем первый элемент активным при загрузке
+		var $firstItem = $(".product__slider__item").first();
+		updateCurrentImage($firstItem);	
+
+		// Обработка клика по элементам с классом .product__slider__item
+		$(".product__slider__item").on("click", function (e) {
+			e.preventDefault();
+			updateCurrentImage($(this));
+		});
 	});
 })(jQuery);

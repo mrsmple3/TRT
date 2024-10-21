@@ -1228,6 +1228,7 @@ header {
 }
 
 .catalog__sub {
+	width: 100%;
 	@include flex-col-start();
 	gap: size(12px);
 	@media screen and (max-width: 1050px) {
@@ -1300,7 +1301,7 @@ header {
 	.catalog__card__title {
 		position: relative;
 		color: #6b6b6b;
-		margin-bottom: 0;
+		margin-bottom: 0 !important;
 		@media screen and (max-width: 768px) {
 			font-size: 20px;
 		}
@@ -1724,6 +1725,7 @@ footer {
 //!Catalog page
 .catalog-page {
 	@include main-container();
+	@include flex-col-start();
 	margin-top: size(54px);
 	margin-bottom: size(128px);
 	@media screen and (max-width: 1050px) {
@@ -1732,6 +1734,7 @@ footer {
 	}
 
 	.span-text {
+		color: rgba(167.88, 167.88, 167.88, 0.65);
 		margin-bottom: size(17px);
 		@media screen and (max-width: 1050px) {
 			margin-bottom: 17px;
@@ -1754,6 +1757,7 @@ footer {
 			color: black;
 		}
 		.catalog__sub__content {
+			width: 100%;
 			color: rgba(0, 0, 0, 0.5);
 		}
 	}
@@ -1924,7 +1928,31 @@ footer {
 		padding-bottom: 72px;
 	}
 }
+.product__slider__btn {
+	position: absolute;
+	left: 0;
+	width: size(88px);
+	height: size(16px);
+	@include flex-center();
+	justify-content: center;
+	background: #dadada;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 3;
+	&.next {
+		bottom: 0;
+	}
+	img {
+		width: size(10px);
+		height: size(5px);
+		@media screen and (max-width: 1050px) {
+			width: 10px;
+			height: 5px;
+		}
+	}
+}
 .product__left {
+	position: relative;
 	height: size(460px);
 	@include flex-stretch();
 	gap: size(10px);
