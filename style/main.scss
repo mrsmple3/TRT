@@ -89,6 +89,7 @@ $conversion-factor: 24px;
 }
 
 body {
+	position: relative;
 	width: 100%;
 	@include flex-col-start();
 	font-family: "Poppins", sans-serif;
