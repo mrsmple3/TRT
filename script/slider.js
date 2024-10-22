@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			nextEl: ".news__slider__btn.next",
 			prevEl: ".news__slider__btn.prev",
 		},
-		slidesPerView: minWidthMobile ? 4 : 2,
+		slidesPerView: minWidthMobile ? 4 : 1,
 		speed: 1300,
 		spaceBetween: size(20),
 		loop: true,

@@ -203,5 +203,21 @@
 				$(this).addClass("active");
 			}
 		});
+
+		$(".characteristic__title").on("click", function () {
+			$(".characteristic__title").removeClass("active");
+
+			$(this).addClass("active");
+
+			var tabNumber = $(this).data("tab");
+
+			$(".characteristic__content").hide();
+
+			$('.characteristic__content[data-content="' + tabNumber + '"]').show();
+		});
+
+		// Активируем первый таб и его содержимое по умолчанию
+		$('.characteristic__title[data-tab="1"]').addClass("active");
+		$('.characteristic__content[data-content="1"]').show();
 	});
 })(jQuery);
