@@ -517,6 +517,9 @@ header {
 	line-height: 152.3%;
 	word-wrap: break-word;
 	margin-bottom: 47px;
+	@media screen and (max-width: 1050px) {
+		font-size: 17px;
+	}
 }
 .mail {
 	color: rgba(255, 255, 255, 0.9);
@@ -1696,8 +1699,9 @@ footer {
 .products {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(size(308px), 1fr));
-	gap: size(20px);
+	grid-template-columns: repeat(auto-fill, minmax(size(300px), 1fr));
+	column-gap: size(20px);
+	row-gap: size(70px);
 	margin-bottom: size(172px);
 	@media screen and (max-width: 1050px) {
 		grid-template-columns: repeat(auto-fill, minmax(183px, 1fr));
@@ -1718,6 +1722,9 @@ footer {
 	background-color: white;
 	border-radius: 5px;
 	margin-bottom: size(22px);
+	img {
+		object-fit: contain;
+	}
 	@media screen and (max-width: 1050px) {
 		padding: 34px 39px;
 		margin-bottom: 22px;
@@ -1997,6 +2004,9 @@ footer {
 	@media screen and (max-width: 1050px) {
 		width: 61.79px;
 	}
+	@media screen and (max-width: 600px) {
+		display: none;
+	}
 	z-index: 3;
 	&.prev {
 		top: -5%;
@@ -2122,13 +2132,12 @@ footer {
 	}
 	.characteristic__title {
 		padding: size(19px) size(46px);
-		word-wrap: nowrap;
 		color: #797979;
 		font-size: size(20px);
 		font-family: Poppins, sans-serif;
 		font-weight: 300;
 		line-height: 100%;
-		word-wrap: break-word;
+		white-space: nowrap;
 		padding-bottom: size(11px);
 		border-bottom: 1px solid #797979;
 		margin-bottom: size(40px);
@@ -2191,7 +2200,15 @@ footer {
 }
 
 .tabs {
+	width: 100%;
 	@include flex-start();
+	justify-content: flex-start;
+	@media screen and (max-width: 1050px) {
+		overflow-x: scroll;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
 }
 .recommendation {
 	@include main-container();
@@ -2775,10 +2792,9 @@ footer {
 //!distributer
 .distrubetr-bg {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
+	inset: 0;
+	width: 100%;
+	height: 100%;
 	object-position: end;
 	opacity: 0.4;
 	z-index: -1;
@@ -2848,7 +2864,7 @@ footer {
 			gap: 25px;
 		}
 		.distributer__item__content {
-			height: max-content;
+			height: size(150px);
 		}
 		.distributer__item__icon {
 			transform: rotate(45deg);
