@@ -594,10 +594,16 @@ header {
 
 .mail {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 17px;
+  font-size: calc(0.7083333333 * (1vw + 1vh));
   font-weight: 600;
   word-wrap: break-word;
-  margin-bottom: 46px;
+  margin-bottom: calc(1.9166666667 * (1vw + 1vh));
+}
+@media screen and (min-width: 1050px) {
+  .mail {
+    font-size: 17px;
+    margin-bottom: 46px;
+  }
 }
 
 .socmedia {
@@ -1914,6 +1920,7 @@ footer .address {
 }
 @media screen and (max-width: 1050px) {
   footer .address {
+    font-size: 17px;
     margin-bottom: 30px;
   }
 }
@@ -1922,6 +1929,7 @@ footer .mail {
 }
 @media screen and (max-width: 1050px) {
   footer .mail {
+    font-size: 17px;
     margin-bottom: 30px;
   }
 }
@@ -2218,6 +2226,20 @@ footer .copy {
   color: rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (max-width: 1050px) {
+  .mobile-container {
+    width: 100%;
+    padding-right: calc(5 * (1vw + 1vh));
+    padding-left: calc(5 * (1vw + 1vh));
+  }
+}
+@media screen and (max-width: 1050px) and (max-width: 1050px) {
+  .mobile-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 .about-page {
   width: 100%;
   margin-top: calc(2.7083333333 * (1vw + 1vh));
@@ -2250,9 +2272,10 @@ footer .copy {
   }
 }
 .about-page .content__title {
-  color: black;
+  color: black !important;
   text-transform: uppercase;
   margin-bottom: calc(1.8333333333 * (1vw + 1vh));
+  font-weight: 500;
 }
 @media screen and (max-width: 1050px) {
   .about-page .content__title {

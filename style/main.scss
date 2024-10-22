@@ -520,10 +520,14 @@ header {
 }
 .mail {
 	color: rgba(255, 255, 255, 0.9);
-	font-size: 17px;
+	font-size: size(17px);
 	font-weight: 600;
 	word-wrap: break-word;
-	margin-bottom: 46px;
+	margin-bottom: size(46px);
+	@media screen and (min-width: 1050px) {
+		font-size: 17px;
+		margin-bottom: 46px;
+	}
 }
 .socmedia {
 	display: flex;
@@ -1542,12 +1546,14 @@ footer {
 		width: 100%;
 		margin-bottom: 0;
 		@media screen and (max-width: 1050px) {
+			font-size: 17px;
 			margin-bottom: 30px;
 		}
 	}
 	.mail {
 		margin-bottom: 0;
 		@media screen and (max-width: 1050px) {
+			font-size: 17px;
 			margin-bottom: 30px;
 		}
 	}
@@ -1778,6 +1784,12 @@ footer {
 	}
 }
 
+.mobile-container {
+	@media screen and (max-width: 1050px) {
+		@include main-container();
+	}
+}
+
 //!About Page
 .about-page {
 	width: 100%;
@@ -1798,9 +1810,10 @@ footer {
 		}
 	}
 	.content__title {
-		color: black;
+		color: black !important;
 		text-transform: uppercase;
 		margin-bottom: size(44px);
+		font-weight: 500;
 		@media screen and (max-width: 1050px) {
 			margin-bottom: 42px;
 		}
